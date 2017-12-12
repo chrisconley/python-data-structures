@@ -1,5 +1,9 @@
 """
 Heap representation of priority queue as described in Section 2.4, pg 313
+
+Python has its own implementation:
+https://docs.python.org/3.6/library/heapq.html
+https://github.com/python/cpython/blob/master/Lib/heapq.py
 """
 
 
