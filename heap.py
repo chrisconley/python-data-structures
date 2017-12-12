@@ -1,3 +1,8 @@
+"""
+Heap representation of priority queue as described in Section 2.4, pg 313
+"""
+
+
 class MaxHeap:
     def __init__(self, keys=[]):
         self._size = 0

@@ -1,15 +1,18 @@
+"""
+ResizingArrayStack and LinkedList Stack implementations from Section 1.3 pgs 136 and 147
+"""
+
+
 class ResizingArrayStack:
     def __init__(self):
         self._array = [None]
         self._size = 0
-        pass
 
     def push(self, item):
         if self._size == len(self._array):
             self._resize(2 * len(self._array))
         self._array[self.size] = item
         self._size += 1
-        pass
 
     def pop(self):
         value = self._array[self._size-1]
