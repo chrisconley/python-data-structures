@@ -31,3 +31,39 @@ class ResizingArrayStack:
         for i in range(0, self._size):
             temp[i] = self._array[i]
         self._array = temp
+
+
+class Stack:
+    def __init__(self):
+        self._first = None
+        self._size = 0
+
+    def push(self, item):
+        old_first = self._first
+        self._first = Node(item, next_item=old_first)
+        self._size += 1
+
+    def pop(self):
+        old_first = self._first
+        self._first = old_first.next_item
+        self._size -= 1
+        return old_first.item
+
+    @property
+    def size(self):
+        return self._size
+
+    def is_empty(self):
+        return self._size == 0
+
+    def __iter__(self):
+        next_item = self._first
+        while next_item is not None:
+            yield next_item.item
+            next_item = next_item.next_item
+
+
+class Node:
+    def __init__(self, item, next_item=None):
+        self.item = item
+        self.next_item = next_item
