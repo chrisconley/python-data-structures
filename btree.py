@@ -74,7 +74,7 @@ class BinarySearchTree:
     def _size(self, node):
         return node.size if node else 0
 
-    def serliaze(self):
+    def serialize(self):
         height = self.height
         queue = deque([(self.root, 0)])
         result = []

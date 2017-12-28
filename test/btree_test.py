@@ -49,31 +49,31 @@ class BinarySearchTreeTests(unittest.TestCase):
         for index, character in enumerate('HCSAE'):
             tree.put(character, index)
 
-        self.assertEqual(tree.serliaze(), ['H', 'C', 'S', 'A', 'E', None, None])
+        self.assertEqual(tree.serialize(), ['H', 'C', 'S', 'A', 'E', None, None])
 
         tree = btree.BinarySearchTree()
         for index, character in enumerate('HCSAEX'):
             tree.put(character, index)
 
-        self.assertEqual(tree.serliaze(), ['H', 'C', 'S', 'A', 'E', None, 'X'])
+        self.assertEqual(tree.serialize(), ['H', 'C', 'S', 'A', 'E', None, 'X'])
 
         tree = btree.BinarySearchTree()
         for index, character in enumerate('HCSAERX'):
             tree.put(character, index)
 
-        self.assertEqual(tree.serliaze(), ['H', 'C', 'S', 'A', 'E', 'R', 'X'])
+        self.assertEqual(tree.serialize(), ['H', 'C', 'S', 'A', 'E', 'R', 'X'])
 
         tree = btree.BinarySearchTree()
         for index, character in enumerate('HCSAX'):
             tree.put(character, index)
 
-        self.assertEqual(tree.serliaze(), ['H', 'C', 'S', 'A', None, None, 'X'])
+        self.assertEqual(tree.serialize(), ['H', 'C', 'S', 'A', None, None, 'X'])
 
         tree = btree.BinarySearchTree()
         for index, character in enumerate('HCSBXAY'):
             tree.put(character, index)
 
-        self.assertEqual(tree.serliaze(), ['H', 'C', 'S', 'B', None, None, 'X', 'A', None, None, 'Y'])
+        self.assertEqual(tree.serialize(), ['H', 'C', 'S', 'B', None, None, 'X', 'A', None, None, 'Y'])
 
     def test_height(self):
         tree = btree.BinarySearchTree()
